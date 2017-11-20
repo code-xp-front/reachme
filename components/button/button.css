@@ -1,0 +1,30 @@
+/* default */
+.button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* modifiers */
+.button--primary {
+    color: #ffffff;
+    background: #499ef7;
+    border-color: #499ef7;
+}
+
+.button--secondary {
+    color: #ffffff;
+    background: #0c1519;
+    border-color: #0c1519;
+}
+
+.button--outline {
+    color: #838c91;
+    background: #ffffff;
+    border-color: #edeeef;
+}
