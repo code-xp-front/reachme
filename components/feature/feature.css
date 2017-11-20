@@ -6,17 +6,6 @@
 }
 
 /* modifiers */
-.feature--reverse{
-    padding-top: 0;
-    padding-bottom: 2rem;
-    flex-direction: column-reverse;
-}
-
-.feature--reverse .feature__icon {
-    align-self: flex-start;
-    transform: translateX(-2rem);
-}
-
 .feature--white {
     background-color: #ffffff;
 }
@@ -26,24 +15,54 @@
 }
 
 .feature--lighter-gray {
-    background-color: #eef6fb;
+    background-color: #f0f5f9;
 }
 
-
 /* elements */
-.feature__icon {
+.feature__icon--start {
+    align-self: flex-start;
+    width: 80%;
+    margin-top: 2.5rem;
+    transform: translateX(-1.5rem);
+}
+
+.feature__icon--center {
+    width: 100%;
+    margin-top: 0;
+    transform: translateY(3rem);
+}
+
+.feature__icon--end {
     align-self: flex-end;
-    transform: translateX(2rem);
+    width: 80%;
+    margin-top: 2.5rem;
+    transform: translateX(1.5rem);
+}
+
+.feature__icon-social-publishing {
+    margin-top: 0;
+    transform: translate(1.5rem, 7px);
+}
+
+.feature__icon-collaboration {
+    margin-bottom: 3rem;
 }
 
 .feature__title {
     font-size: 2rem;
-    margin: 0;
+    line-height: 2;
+    margin: 0 0 .5rem;
 }
 
 .feature__text {
     color: #a2aebb;
-    margin: 0 0 1rem;
+    line-height: 1.5;
+    margin: 0 0 2rem;
+}
+
+.feature__other-icon {
+    display: block;
+    margin: 0 0 2rem;
 }
 
 
@@ -51,30 +70,54 @@
 @media (min-width: 768px) {
     .feature {
         flex-direction: row;
-        padding-left: 10%; 
-        padding-right: 10%;
-        padding-bottom: 2rem; 
+        align-items: center;
+        padding: 0 0 0 2rem;
     }
-    
+
     .feature--reverse{
         flex-direction: row-reverse;
-    }
-    
-    .feature--reverse .feature__icon {
-        margin-left: 0;
-        margin-right: 1rem; 
+        padding: 0 2rem 0 0;
     }
     
     .feature__icon {
-        align-self: flex-end;
-        margin-left: 1rem;
-        transform: translate(0, 2rem);
+        width: 60%;
+        margin-top: 6rem;
+        transform: translateX(0);
+    }
+
+    .feature__icon--start {
+        align-self: unset;
+        margin-right: 4rem;
+        transform: translateX(0);
+    }
+
+    .feature__icon--center {
+        align-self: unset;
+        margin-right: 4rem;
+    }
+
+    .feature__icon--end {
+        align-self: unset;
+        margin-left: 4rem;
+    }
+
+    .feature__icon-social-publishing {
+        transform: translate(1.5rem, 7px);
+    }
+
+    .feature__icon-collaboration {
+        margin-bottom: 6rem;
     }
 }
 
 @media (min-width: 992px) {
-    .feature {
-        padding-left: 20%; 
-        padding-right: 20%; 
+    .feature, .feature--reverse{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .feature__icon {
+        width: 50%;
+        transform: translateY(0);
     }
 }
